@@ -1,0 +1,23 @@
+[
+    {
+        "name": "hostName",
+        "label": "Host Name",
+        "type": "char",
+        "length": 32,
+        "value": "HelloHost-01"
+    },
+    {
+        "name": "projectName",
+        "label": "Project Name",
+        "type": "char",
+        "length": 32,
+        "value": "Hello World Proj"
+    },
+    {
+        "name": "message",
+        "label": "Message",
+        "type": "char",
+        "length": 32,
+        "value": "Hello World"
+    }
+]
