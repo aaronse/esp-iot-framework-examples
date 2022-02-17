@@ -1,5 +1,11 @@
 # esp-iot-framework-examples
-Some example/experiment projects that use https://github.com/maakbaas/esp8266-iot-framework to help build firmware for ESP8266 and ESP32 MCUs.
+The [esp8266-iot-framework](https://github.com/maakbaas/esp8266-iot-framework) includes usage documentation and [/examples](https://github.com/maakbaas/esp8266-iot-framework/tree/master/examples).
+
+This repo has additional board specific examples/experiment projects showing how https://github.com/maakbaas/esp8266-iot-framework can be used to help build firmware for ESP8266 and ESP32 MCUs.
+
+https://github.com/maakbaas/esp8266-iot-framework/tree/master/examples
+
+https://github.com/maakbaas/esp8266-iot-framework
 
 ## Setup
 esp8266-iot-framework compiled library, or source code, is needed to build the examples.  Am using PlatformIO within VS Code on Windows 10.
