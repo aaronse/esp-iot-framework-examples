@@ -1,5 +1,5 @@
 # esp-iot-framework-examples
-The [esp8266-iot-framework](https://github.com/maakbaas/esp8266-iot-framework) includes usage documentation and [/examples](https://github.com/maakbaas/esp8266-iot-framework/tree/master/examples).  Please ensure you're familiar with those core examples.
+The [esp8266-iot-framework](https://github.com/maakbaas/esp8266-iot-framework) includes usage [documentation](https://github.com/maakbaas/esp8266-iot-framework/tree/master/docs) and [/examples](https://github.com/maakbaas/esp8266-iot-framework/tree/master/examples).  Please ensure you're familiar with those core examples.
 
 This repo has additional board specific examples/experiment projects showing how https://github.com/maakbaas/esp8266-iot-framework can be used to help build firmware for various ESP8266 and ESP32 based boards.
 
