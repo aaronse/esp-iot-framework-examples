@@ -1,5 +1,8 @@
 # esp-iot-framework-examples
-Some example/experiment projects that use https://github.com/maakbaas/esp8266-iot-framework to help build firmware for ESP8266 and ESP32 MCUs.
+The [esp8266-iot-framework](https://github.com/maakbaas/esp8266-iot-framework) includes usage [documentation](https://github.com/maakbaas/esp8266-iot-framework/tree/master/docs) and [/examples](https://github.com/maakbaas/esp8266-iot-framework/tree/master/examples).  Please ensure you're familiar with those core examples.
+
+This repo has additional board specific examples/experiment projects showing how https://github.com/maakbaas/esp8266-iot-framework can be used to help build firmware for various ESP8266 and ESP32 based boards.
+
 
 ## Setup
 esp8266-iot-framework compiled library, or source code, is needed to build the examples.  Am using PlatformIO within VS Code on Windows 10.
@@ -9,7 +12,7 @@ Ensure you've read and understand the setup documentation within https://github.
 Typically <project folder>/lib/ folder will contain project specific (private) libraries, like /lib/esp8266-iot-framework/...
 
 ### Optmization for Windows Devs
-However, Windows Devs can optionally use [NTFS links](https://en.wikipedia.org/wiki/NTFS_links#Command-line_tools_and_APIs) to reference an existing copy of the library sources already on their drive.  Rather than copy snapshots of library code, instead create NTFS link to reference library sources via mklink, e.g. :
+Rather than copy snapshots of library code, Windows Devs can optionally use [NTFS links](https://en.wikipedia.org/wiki/NTFS_links#Command-line_tools_and_APIs) via mklink.exe Win OS tool to reference (via Symbolic links) an existing copy of the library sources already on their drive.  e.g. :
 
 ```
 cd C:\git\esp-iot-framework-examples\helloWorld
