@@ -12,7 +12,7 @@ Ensure you've read and understand the setup documentation within https://github.
 Typically <project folder>/lib/ folder will contain project specific (private) libraries, like /lib/esp8266-iot-framework/...
 
 ### Optmization for Windows Devs
-However, Windows Devs can optionally use [NTFS links](https://en.wikipedia.org/wiki/NTFS_links#Command-line_tools_and_APIs) to reference an existing copy of the library sources already on their drive.  Rather than copy snapshots of library code, instead create NTFS link to reference library sources via mklink, e.g. :
+Rather than copy snapshots of library code, Windows Devs can optionally use [NTFS links](https://en.wikipedia.org/wiki/NTFS_links#Command-line_tools_and_APIs) via mklink.exe Win OS tool to reference (via Symbolic links) an existing copy of the library sources already on their drive.  e.g. :
 
 ```
 cd C:\git\esp-iot-framework-examples\helloWorld
