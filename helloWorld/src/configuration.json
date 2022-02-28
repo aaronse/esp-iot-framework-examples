@@ -11,14 +11,14 @@
         "label": "Project Name",
         "type": "char",
         "length": 32,
-        "value": "Haptic Light ESP8266"
+        "value": "Haptic Light ESP32"
     },
     {
         "name": "mode",
         "label": "Mode",
         "type": "char",
         "length": 20,
-        "inputControl": "select",
+        "control": "select",
         "value": "Aurora",
         "options": [
             "Aurora",
@@ -37,7 +37,7 @@
         "name": "brightness",
         "label": "Brightness",
         "type": "uint8_t",
-        "inputControl": "slider",
+        "control": "slider",
         "value": 50,
         "min": 1,
         "max": 100
@@ -46,7 +46,7 @@
         "name": "nightBrightness",
         "label": "Night Brightness",
         "type": "uint8_t",
-        "inputControl": "slider",
+        "control": "slider",
         "value": 20,
         "min": 1,
         "max": 100
@@ -66,16 +66,14 @@
     {
         "name": "color",
         "label": "Custom Color",
-        "type": "char",
-        "length": 11,
-        "inputControl": "color",
-        "value": "#ff00ff"
+        "type": "color",
+        "value": [255,0,255]
     },
     {
         "name": "speed",
         "label": "Speed",
         "type": "uint8_t",
-        "inputControl": "slider",
+        "control": "slider",
         "value": 23,
         "min": 1,
         "max": 200
@@ -84,7 +82,7 @@
         "name": "audioLevel",
         "label": "Audio FX Intensity",
         "type": "uint8_t",
-        "inputControl": "slider",
+        "control": "slider",
         "value": 50,
         "min": 0,
         "max": 100
@@ -99,7 +97,7 @@
         "name": "pirActiveTimeoutSecs",
         "label": "Auto light timeout secs",
         "type": "uint16_t",
-        "inputControl": "slider",
+        "control": "slider",
         "value": 60,
         "min": 10,
         "max": 300
