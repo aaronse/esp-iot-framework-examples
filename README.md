@@ -25,7 +25,7 @@ mklink /j esp8266-iot-framework C:\git\esp8266-iot-framework\
 
 # Coding for ESP32, or both ESP32 and ESP8266
 
-- ESP32 build uses **"LITTLEFS.h"** not "LittleFS.h" used by ESP8366 build.  So, ensure code references the correct header, #ifdef if need to build for both MCUs.  Otherwise, you'll encounter a build failure like... _"error: 'LittleFS' was not declared in this scope"_.  See helloWorld.cpp for example usage.
+- ESP32 build uses **"LITTLEFS.h"** not "LittleFS.h" used by ESP8266 build.  So, ensure code references the correct header, #ifdef if need to build for both MCUs.  Otherwise, you'll encounter a build failure like... _"error: 'LittleFS' was not declared in this scope"_.  See helloWorld.cpp for example usage.
 
 
 # FAQ / Troubleshooting
