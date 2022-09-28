@@ -5,9 +5,9 @@ This repo has additional board specific examples/experiment projects showing how
 
 
 ## Setup
-esp8266-iot-framework compiled library, or source code, is needed to build the examples.  Am using PlatformIO within VS Code on Windows 10.
+esp8266-iot-framework compiled library, or source code, is needed to build the examples in this repo.  Am using PlatformIO within VS Code on Windows 10.
 
-Ensure you've read and understand the setup documentation within https://github.com/maakbaas/esp8266-iot-framework
+Before going further, ensure you've read and understand the setup documentation within https://github.com/maakbaas/esp8266-iot-framework
 
 Typically <project folder>/lib/ folder will contain project specific (private) libraries, like /lib/esp8266-iot-framework/...
 
