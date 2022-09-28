@@ -11,8 +11,45 @@ Ensure you've read and understand the setup documentation within https://github.
 
 Typically <project folder>/lib/ folder will contain project specific (private) libraries, like /lib/esp8266-iot-framework/...
 
+- cd to your usual git/dev enlistment folder, e.g. c:\git, or some temporary scratch folder, e.g. c:\scratch 
+- Clone this repo containing example projects, then clone my __ESP32__ branch of maakbaas's framework, until if/when ESP32 pull request is approved and merge into main branch.
+
+```
+git clone https://github.com/aaronse/esp-iot-framework-examples
+cd esp-iot-framework-examples\helloWorld\lib
+git clone --single-branch --branch esp32 https://github.com/aaronse/esp8266-iot-framework
+```
+- Ensure esp8266-iot-framework dependencies are installed, and that the framework UI will build and webpack ok.
+```
+cd esp8266-iot-framework
+npm install
+echo verify freshly cloned framework UI bundle builds successfully
+npm run build
+```
+
+- Open helloworld app in VS Code.
+```
+cd ..\..
+code .
+```
+- Use PlatformIO Build task within VS Code... Ctrl + Alt + B
+  - Build should succeed, but with some warnings caused by code within referenced libraries).  Some build warning examples I observed:
+```
+    Transition by adding must_exist=False to SConscript calls.
+    Missing SConscript 'C:\lib\esp8266-iot-framework\scripts\preBuild.py'
+    File "C:\Users\aaron\.platformio\penv\lib\site-packages\platformio\builder\main.py", line 189, in <module>
+
+    C:\Users\aaron\.platformio\packages\framework-arduinoespressif32\cores\esp32\esp32-hal-spi.c: In function 'spiTransferBytesNL':
+    C:\Users\aaron\.platformio\packages\framework-arduinoespressif32\cores\esp32\esp32-hal-spi.c:922:39: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types] ...
+    C:\Users\aaron\.platformio\packages\framework-arduinoespressif32\cores\esp32\esp32-hal-spi.c:923:40: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]   ...
+```
+- Use PlatformIO Upload task within VS Code.
+- Use PlatformIO Monitor task within VS Code.
+    -  [2022-02-28] Currently, for fresh device without SSID name/password configured, startup will block for 60secs during startup until connect times out.  Look at monitor output traces to observe this.  Eventually captive portal will start.  imo, cause is bug in the existing WifiManager.cpp startup logic.  Expecting startup time to be improved in the esp8266-iot-framework orthogonal to the ESP32 branch edits.
+    
 ### Optmization for Windows Devs
-Rather than copy snapshots of library code, Windows Devs can optionally use [NTFS links](https://en.wikipedia.org/wiki/NTFS_links#Command-line_tools_and_APIs) via mklink.exe Win OS tool to reference (via Symbolic links) an existing copy of the library sources already on their drive.  e.g. :
+2022-09-27, following no longer works, framework lib fails during compile/linking step.
+~~Rather than copy snapshots of library code, Windows Devs can optionally use [NTFS links](https://en.wikipedia.org/wiki/NTFS_links#Command-line_tools_and_APIs) via mklink.exe Win OS tool to reference (via Symbolic links) an existing copy of the library sources already on their drive.  e.g. :~~
 
 ```
 cd C:\git\esp-iot-framework-examples\helloWorld
